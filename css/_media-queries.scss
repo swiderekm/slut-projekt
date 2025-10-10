@@ -1,0 +1,7 @@
+@mixin phone {
+    
+    @media ( width < $small){
+        @content
+    }
+    
+};
