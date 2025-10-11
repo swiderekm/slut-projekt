@@ -34,7 +34,7 @@ h1 {
 
 .dropdown {
     position: sticky;
-    top: 0;
+    top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@ h1 {
     width: 100vw;
     margin-top: 5px;
     box-shadow: 0 5px 15px #00000091;
-    gap: 5px;
+    z-index: 999;   
 
     .line {
         border-top: 2px solid white;
@@ -89,7 +89,7 @@ a, .a-startpage {
         }
 
         &.active {
-            background-color: #3f9c9b97; 
+            background-color: #2f7573; 
             font-weight: bolder;
         }
 }

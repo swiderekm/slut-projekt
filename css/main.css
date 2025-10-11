@@ -33,6 +33,103 @@ h1 {
 
 .dropdown {
   position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f504f;
+  height: 80px;
+  width: 100vw;
+  margin-top: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.568627451);
+  z-index: 999;
+}
+.dropdown .line {
+  border-top: 2px solid white;
+  height: 10px;
+  min-width: 250px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: rgba(63, 156, 155, 0.5921568627);
+  height: 200px;
+  width: 100vw;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5215686275);
+}
+
+a, .a-startpage {
+  display: flex;
+  display: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1137254902);
+  width: 100vw;
+  height: 100%;
+}
+a:hover, .a-startpage:hover {
+  background-color: rgba(63, 156, 155, 0.4549019608);
+}
+a.active, .a-startpage.active {
+  background-color: #2f7573;
+  font-weight: bolder;
+}
+
+.container {
+  margin-top: 10px;
+  background-color: #658f7e;
+  height: 100vh;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #dae6e3;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #1f504f;
+  font-family: "Roboto", Helvetica, sans-serif;
+  padding: 15px 0px 15px 0px;
+  height: 150px;
+  width: 100vw;
+}
+
+h1 {
+  display: flex;
+  display: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  height: 100px;
+  width: 100px;
+  margin: 25px;
+}
+
+.dropdown {
+  position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -85,12 +182,6 @@ a:hover, .a-startpage:hover {
   background-color: rgba(63, 156, 155, 0.4549019608);
 }
 a.active, .a-startpage.active {
-  background-color: rgba(63, 156, 155, 0.5921568627);
+  background-color: #2f7573;
   font-weight: bolder;
-}
-
-.container {
-  margin-top: 10px;
-  background-color: #658f7e;
-  height: 100vh;
 }/*# sourceMappingURL=main.css.map */
