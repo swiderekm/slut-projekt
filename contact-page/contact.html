@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact us</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -26,5 +26,50 @@
             </div>
         </nav>
     </header>
+    <main>
+        <h2>Kontakta oss</h2>
+        <section class="info-container">
+            <img src="../images/building.jpg" alt="Penseldrags byggnad" class="building">
+            <div class="contact-info">
+                <p> 📍 Adress: Storgatan 123, 111 22 Stockholm </p>
+                <p> ☎️ Telefon: 08-123 45 678 </p>
+                <p> ✉️ E-post: info@penseldrag.se</p>
+                <p> 🕒 Öppettider: Mån–Fre 09:00–17:00</p>
+            </div>
+        </section>
+        
+        <p class="intro-text">
+        Skicka ett meddelande till oss.<br>
+        En pålitlig partner. Med kort varsel kan vi hjälpa till med det mesta inom måleri – ett mail eller samtal bort.
+        </p>
+
+        <form class="contact-form">
+            <label for="topic">Vad gäller ditt ärende?</label>
+            <select id="topic" name="topic">
+                <option value="">–välja–</option>
+                <option value="Köp av tjänst">Köp av tjänst</option>
+                <option value="Frågor om företaget">Frågor om företaget</option>
+                <option value="Synpunkter på webbplats">Synpunkter på webbplats</option>
+                <option value="annat">Annat</option>
+            </select>
+
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="subject">Ämne:</label>
+            <input type="text" id="subject" name="subject">
+
+            <label for="message">Meddelande:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
 </body>
 </html>
