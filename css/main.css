@@ -17,6 +17,7 @@ body {
   flex-wrap: wrap;
   font-family: "Roboto", Helvetica, sans-serif;
   padding: 15px 0px 15px 0px;
+  width: 100vw;
 }
 .header a {
   color: white;
@@ -196,6 +197,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   font-family: "Roboto", Helvetica, sans-serif;
 }
 .older-projects h2 {
@@ -217,7 +219,7 @@ a {
 }
 .older-projects .projects .startpage-image {
   margin: 50px 0 50px 0;
-  min-width: 500px;
+  min-width: 100px;
   height: 300px;
 }
 
