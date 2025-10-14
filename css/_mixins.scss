@@ -4,3 +4,7 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin font-Arial () {
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
