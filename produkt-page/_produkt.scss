@@ -1,103 +1,100 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    background-color: $color-azure;
-    height: 100vh;
-}
-
 .site-header {
+    background-color: white;
     display: flex;
-    justify-content:  center;
-    background-color: #1f504f;
-    font-family: 'Roboto', Helvetica, sans-serif;
-    padding: 15px 0px 15px 0px;
-    height: 150px;
-    width: 100vw;
-}
+    justify-content:center;
+    padding: 50px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 
-h1 {
-    display: flex;
-    display: row;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.logo-image {
-    height: 100px;
-    width: 100px;
-    margin: 25px;
-}
-
-.dropdown {
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #1f504f;
-    height: 80px;
-    width: 100vw;
-    margin-top: 5px;
-    box-shadow: 0 5px 15px #00000091;
-    gap: 5px;
-
-    .line {
-        border-top: 2px solid white;
-        height: 10px;
-        min-width: 250px;
+    h2 {
+        color: $color-darkgreen;
+        font-family: 'Roboto';
     }
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: #3f9c9b97;
-    height: 200px;
-    width: 100vw;
-
-}
-
-.dropdown:hover .dropdown-content {
+.product-description {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 20px #00000085;
-}
+    margin: 1vh;
 
-a, .a-startpage {
-    display: flex;
-    display: row;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    border-bottom: 1px solid #0000001d;
-    width: 100vw;
-    height: 100%;
-
-        &:hover {
-            background-color: #3f9c9b74;
-        }
-
-        &.active {
-            background-color: #3f9c9b97; 
-            font-weight: bolder;
-        }
-}
-
-.container {
-    margin-top: 10px;
-    background-color: $color-eucalyptus;
-    height: 100vh;
+    p {
+        color: $color-darkgreen;
+        text-align: center;
+    }
 }
 
 
+/*
+ CSS for the main interaction
+*/
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.accordion {
+  margin-bottom: 1em;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #e8e8e8;
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: #d8d8d8;
+}
+
+.accordion .handle label:before {
+  font-family: 'fontawesome';
+  content: "\f054";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: middle;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .handle label:before {
+  content: "\f078";
+}
