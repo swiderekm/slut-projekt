@@ -322,31 +322,28 @@ form {
   text-align: center;
 }
 
-/*
- CSS for the main interaction
-*/
-.accordion > input[type=checkbox] {
+.collapsible > input[type=checkbox] {
   position: absolute;
   left: -100vw;
 }
 
-.accordion .content {
+.collapsible .content {
   overflow-y: hidden;
   height: 0;
   transition: height 0.3s ease;
 }
 
-.accordion > input[type=checkbox]:checked ~ .content {
+.collapsible > input[type=checkbox]:checked ~ .content {
   height: auto;
   overflow: visible;
 }
 
-.accordion label {
+.collapsible label {
   display: block;
 }
 
 /*
- Styling
+ Styling Collapsible
 */
 body {
   font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
@@ -354,23 +351,23 @@ body {
   font-weight: 300;
 }
 
-.accordion {
+.collapsible {
   margin-bottom: 1em;
 }
 
-.accordion > input[type=checkbox]:checked ~ .content {
+.collapsible > input[type=checkbox]:checked ~ .content {
   padding: 15px;
   border: 1px solid #e8e8e8;
   border-top: 0;
 }
 
-.accordion .handle {
+.collapsible .handle {
   margin: 0;
   font-size: 1.125em;
   line-height: 1.2em;
 }
 
-.accordion label {
+.collapsible label {
   color: #333;
   cursor: pointer;
   font-weight: normal;
@@ -378,12 +375,12 @@ body {
   background: #e8e8e8;
 }
 
-.accordion label:hover,
-.accordion label:focus {
+.collapsible label:hover,
+.collapsible label:focus {
   background: #d8d8d8;
 }
 
-.accordion .handle label:before {
+.collapsible .handle label:before {
   font-family: "fontawesome";
   content: "\f054";
   display: inline-block;
@@ -393,6 +390,6 @@ body {
   vertical-align: middle;
 }
 
-.accordion > input[type=checkbox]:checked ~ .handle label:before {
+.collapsible > input[type=checkbox]:checked ~ .handle label:before {
   content: "\f078";
 }/*# sourceMappingURL=main.css.map */
