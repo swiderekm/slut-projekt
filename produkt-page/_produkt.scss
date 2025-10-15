@@ -1,5 +1,5 @@
 .site-header {
-    background-color: white;
+    background-color: $color-azure;
     display: flex;
     justify-content:center;
     padding: 50px;
@@ -23,6 +23,7 @@
     }
 }
 
+/* Collapsible */
 
 .collapsible > input[type="checkbox"] {
   position: absolute;
@@ -44,12 +45,11 @@
   display: block;
 }
 
-/*
- Styling Collapsible
-*/
+/* Styling for the Collapsible */
 body {
-  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-  color: #333;
+  font-size: 1em;
+  @include font-Arial ();
+  color: black;
   font-weight: 300;
 }
 
@@ -59,7 +59,7 @@ body {
 
 .collapsible > input[type="checkbox"]:checked ~ .content {
   padding: 15px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid $color-azure;
   border-top: 0;
 }
 
@@ -70,28 +70,29 @@ body {
 }
 
 .collapsible label {
-  color: #333;
+  color: white;
   cursor: pointer;
+  @include font-Arial();
   font-weight: normal;
   padding: 15px;
-  background: #e8e8e8;
+  background: $color-eucalyptus;
 }
 
 .collapsible label:hover,
 .collapsible label:focus {
-  background: #d8d8d8;
+  background: $color-charcoal;
 }
 
 .collapsible .handle label:before {
-  font-family: 'fontawesome';
-  content: "\f054";
+  @include font-Arial();
+  content: "＋";
   display: inline-block;
   margin-right: 10px;
-  font-size: .58em;
-  line-height: 1.556em;
+  font-size: 1em;
+  line-height: 1.5em;
   vertical-align: middle;
 }
 
 .collapsible > input[type="checkbox"]:checked ~ .handle label:before {
-  content: "\f078";
+  content: "－";
 }
