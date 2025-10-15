@@ -3,11 +3,11 @@
     padding: 0px;
 }
 
-body {
-    background-image: url('https://images.stockcake.com/public/4/6/f/46f8e368-ca18-4292-aebc-393a96bd33b5_large/cosmic-cityscape-art-stockcake.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+// body {
+//     background-image: url('https://images.stockcake.com/public/4/6/f/46f8e368-ca18-4292-aebc-393a96bd33b5_large/cosmic-cityscape-art-stockcake.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
 
 .header {
     display: flex;
@@ -17,6 +17,7 @@ body {
     flex-wrap: wrap;
     @include  font-Arial();
     padding: 15px 0px 15px 0px;
+    width: 100vw;
 
     a  {
         color: white;
@@ -195,6 +196,7 @@ a {
     background-color: azure;
     box-shadow: 1px -2px 15px #00000085;
     @include flex-container(column, center, center);
+    flex-wrap: wrap;
     @include  font-Arial();
 
     h2 {
@@ -219,7 +221,7 @@ a {
 
         .startpage-image {
             margin: 50px 0 50px 0;
-            min-width: 500px;
+            min-width: 100px;
             height: 300px;
         }
 
