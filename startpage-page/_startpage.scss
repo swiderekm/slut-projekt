@@ -1,23 +1,24 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
-// body {
-//     background-image: url('https://images.stockcake.com/public/4/6/f/46f8e368-ca18-4292-aebc-393a96bd33b5_large/cosmic-cityscape-art-stockcake.jpg');
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 .header {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
     align-items: center;
     background-color: #141C2F;
     flex-wrap: wrap;
     @include  font-Arial();
     padding: 15px 0px 15px 0px;
-    width: 100vw;
+    width: 100%;
 
     a  {
         color: white;
@@ -25,6 +26,14 @@
         display: row;
         justify-content: center;
         align-items: center;  
+    }
+
+    .logo-container {
+        @include flex-container(row, center, center);
+    }
+
+    @include laptop() {
+        @include flex-container(row, space-between, center)
     }
 }
 
@@ -44,7 +53,11 @@
     margin: 5px;
     padding: 25px;
     box-shadow: 0 5px 15px #00000091;
-    border-radius: 10px;   
+    border-radius: 10px; 
+    
+    @include laptop() {
+        display: none;
+    }
 
     .line {
         display: flex;
@@ -58,11 +71,34 @@
         position: absolute;
         border-radius: 10px;
         top: 100%;
+        max-width: 100%;
     }
 }
 
 .dropdown:hover .dropdown-content {
     @include flex-container(column, flex-start, center)
+}
+
+.desktop-nav {
+    display: none;
+
+    @include laptop() {
+        display: block;
+        @include flex-container(row, flex-end, center);
+
+        a {
+            padding: 15px 35px 15px 35px;
+            margin: 0px 10px 0px 10px;
+            background-color: #1f504fd2;
+            border-radius: 15px;
+
+            &.active {
+                background-color: #75dcd9;
+                color: black; 
+                font-weight: bolder;
+            }
+        }
+    }
 }
 
 .a-startpage {
@@ -75,7 +111,7 @@
     border-bottom: 1px solid #0000001d;
     border-radius: 5px;
     background-color: $color-charcoal;
-    width: 98vw;
+    width: 100vw;
     padding: 35px 0px 35px 0px;
 
         &:hover {
@@ -96,9 +132,18 @@ a {
     @include  font-Arial();
 }
 
+.hero-section {
+    width: calc(100vw - (100vw - 100%));
+}
+
+
 .CTA {
     padding: 15px;
     margin: 15px 0 15px 0;
+
+    @include monitor {
+        margin: 15px 10% 15px 10%;
+    }
 
     .cta-content {
         display: flex;
@@ -149,6 +194,11 @@ a {
                 &:hover {
                     background-color: #2d5f51;
                 }
+                
+                @include laptop() {
+                    padding: 30px 45px; 
+                    font-size: large;    
+                }
             }
 
             .produkt-btn {
@@ -164,6 +214,11 @@ a {
                 &:hover {
                     background-color: #2d5f51;
                 }
+
+                @include laptop() {
+                    padding: 30px 45px;    
+                    font-size: large; 
+                }
             }
         }
     }
@@ -173,6 +228,7 @@ a {
     background: linear-gradient(20deg,rgba(34, 153, 195, 1) 0%, rgba(253, 147, 45, 1) 100%);
     width: 20px;
     height: 20px;
+    margin-left: 15px;
     border-radius: 50px;
     transition: .5s;
 }
@@ -199,6 +255,11 @@ a {
     flex-wrap: wrap;
     @include  font-Arial();
 
+    @include monitor() {
+        margin: 0 8% 0 8%;
+        border-radius: 5px;
+    }
+
     h2 {
         margin: 25px 0 50px 0;
         color: black;
@@ -207,6 +268,8 @@ a {
 
     .projects {
         @include  font-Arial();
+        @include flex-container(column, center, center);
+        flex-wrap: wrap;
         letter-spacing: 2px;
         line-height: 1.5;
         word-spacing: 2px;
@@ -217,12 +280,55 @@ a {
 
         p {
             text-align: justify;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            line-height: 1.6;
+            word-wrap: break-word;
+            max-width: 100%;
         }
 
         .startpage-image {
-            margin: 50px 0 50px 0;
-            min-width: 100px;
-            height: 300px;
+            margin: 50px 0;
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        @include laptop() {
+            text-align: center;
+        }
+
+        @include monitor() {
+            text-align: start;
+
+            .display-container-right {
+                @include flex-container(row, space-between, center);
+                width: 100%;
+                margin-bottom: 50px;
+
+                .startpage-image {
+                    margin-left: 20px;
+                }
+            }
+
+            .display-container-left {
+                @include flex-container(row, space-between, center);
+                width: 100%;
+                margin-bottom: 50px;
+
+                .display-text{
+                    margin-left: 20px;
+                    order: 2;
+                }
+
+                .display-image {
+                    order: 1;
+                }
+            }
+
+            .display-text {
+                width: 50%;
+            }
         }
 
     }
@@ -234,7 +340,11 @@ footer {
     color: white;
     background-color: #151515;
     height: 50vh;
-    width: 98.1vw;
+    width: 100%;
+
+    &>div {
+        width: 100%;
+    }
 
     h2 {
         margin-left: 15px;
@@ -242,13 +352,12 @@ footer {
     }
 
     .contact-footer {
-        margin-bottom: 150px;
         margin-left: 25px;
     }
 
     .nav-footer-container {
         @include flex-container(row, space-between, center);
-        width: 98.1vw;
+        width: 100%;
 
         .nav-footer {
             @include flex-container(row, flex-start, flex-start);
@@ -257,6 +366,7 @@ footer {
 
         .nav-footer-BTN {
             @include flex-container(row, space-between, center);
+            flex-wrap: wrap;
             flex-grow: 2;
             
             a {
@@ -265,7 +375,7 @@ footer {
                 margin-left: 15px;
                 font-size: large;
 
-                &.active {
+                &.active-footer {
                     color: white;
                     border: 2px  solid $color-charcoal;
                     padding: 5px;

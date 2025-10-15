@@ -1,7 +1,17 @@
 @mixin phone {
-    
-    @media ( width < $small){
-        @content
+    @media (max-width: $small) {
+        @content;
     }
-    
-};
+}
+
+@mixin laptop {
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (min-width: $xl) {
+        @content;
+    }
+}
