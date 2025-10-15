@@ -4,32 +4,33 @@
 }
 
 body {
-    background-color: $color-azure;
-    height: 100vh;
+    background-image: url('https://images.stockcake.com/public/4/6/f/46f8e368-ca18-4292-aebc-393a96bd33b5_large/cosmic-cityscape-art-stockcake.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
     display: flex;
     justify-content:  center;
-    background-color: #1f504f;
-    font-family: 'Roboto', Helvetica, sans-serif;
-    padding: 15px 0px 15px 0px;
-    height: 150px;
-    width: 100vw;
-}
-
-h1 {
-    display: flex;
-    display: row;
-    justify-content: center;
     align-items: center;
-}
+    background-color: #141C2F;
+    flex-wrap: wrap;
+    @include  font-Arial();
+    padding: 15px 0px 15px 0px;
+    width: 100vw;
 
+    a  {
+        color: white;
+        display: flex;
+        display: row;
+        justify-content: center;
+        align-items: center;  
+    }
+}
 
 .logo-image {
     height: 100px;
     width: 100px;
-    margin: 25px;
 }
 
 .dropdown {
@@ -39,65 +40,240 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1f504f;
-    height: 80px;
-    width: 100vw;
-    margin-top: 5px;
+    background-color: #1f504fd2;
+    margin: 5px;
+    padding: 25px;
     box-shadow: 0 5px 15px #00000091;
-    z-index: 999;   
+    border-radius: 10px;   
 
     .line {
+        display: flex;
         border-top: 2px solid white;
-        height: 10px;
+        margin: 10px;
         min-width: 250px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        border-radius: 10px;
+        top: 100%;
     }
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: #3f9c9b97;
-    height: 200px;
-    width: 100vw;
-
-}
-
 .dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 20px #00000085;
+    @include flex-container(column, flex-start, center)
 }
 
-a, .a-startpage {
+.a-startpage {
     display: flex;
     display: row;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
+    color: $color-azure;
     text-align: center;
     border-bottom: 1px solid #0000001d;
-    width: 100vw;
-    height: 100%;
+    border-radius: 5px;
+    background-color: $color-charcoal;
+    width: 98vw;
+    padding: 35px 0px 35px 0px;
 
         &:hover {
-            background-color: #3f9c9b74;
+            background-color: #307978;
+            color: black;
         }
 
         &.active {
-            background-color: #2f7573; 
+            background-color: #75dcd9;
+            color: black; 
             font-weight: bolder;
         }
 }
 
-.container {
-    margin-top: 10px;
-    background-color: $color-eucalyptus;
-    height: 100vh;
+a {
+    color: white;
+    text-decoration: none;
+    @include  font-Arial();
 }
 
+.CTA {
+    padding: 15px;
+    margin: 15px 0 15px 0;
 
+    .cta-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: linear-gradient(20deg,rgba(34, 153, 195, 1) 0%, rgba(253, 147, 45, 1) 100%);
+        box-shadow: 2px 5px 5px $color-darkgreen;
+        border-radius: 50px;
+        padding: 50px;
+
+        .cta-text {
+            flex-basis: 150px;
+
+            h2 {
+                color: $color-azure;
+                @include  font-Arial();
+                letter-spacing: 2px;
+                text-shadow: 1px 1px 5px black;
+            }
+
+            p {
+                color: $color-azure;
+                @include  font-Arial();
+                letter-spacing: 2px;
+                line-height: 1.5;
+                word-spacing: 2px;
+                text-shadow: 1px 1px 5px black;
+            }
+        }
+
+        .cta-buttons {
+            @include flex-container(row, space-evenly, center);
+            flex-wrap: wrap;
+            flex-basis: 100px;
+            gap: 10px;
+            margin-top: 25px;
+
+            .contact-btn {
+                @include flex-container(row, space-between, center);
+                border-radius: 50px;
+                padding: 20px 25px;
+                color: $color-azure;
+                min-width: 158px;
+                background-color: #0f211c;
+                box-shadow: 2px 5px 5px #00000091;
+                transition: .3s;
+
+                &:hover {
+                    background-color: #2d5f51;
+                }
+            }
+
+            .produkt-btn {
+                @include flex-container(row, space-between, center);
+                border-radius: 50px;
+                padding: 20px 25px;
+                color: $color-azure;
+                min-width: 158px;
+                background-color: #0f211c;
+                box-shadow: 2px 5px 5px #00000091;
+                transition: .3s;
+
+                &:hover {
+                    background-color: #2d5f51;
+                }
+            }
+        }
+    }
+}
+
+.a-circle {
+    background: linear-gradient(20deg,rgba(34, 153, 195, 1) 0%, rgba(253, 147, 45, 1) 100%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.contact-btn:hover .a-circle {
+    transform: rotate(360deg) scale(1.5);
+    transition: transform .5s;
+    border: .5px solid white;
+    box-shadow: 0 0 .5rem azure;
+}
+
+.produkt-btn:hover .a-circle {
+    transform: rotate(360deg) scale(1.5);
+    transition: transform .5s;
+    border: .5px solid white;
+    box-shadow: 0 0 .5rem azure;
+}
+
+.older-projects {
+    padding: 50px;
+    background-color: azure;
+    box-shadow: 1px -2px 15px #00000085;
+    @include flex-container(column, center, center);
+    flex-wrap: wrap;
+    @include  font-Arial();
+
+    h2 {
+        margin: 25px 0 50px 0;
+        color: black;
+        letter-spacing: 2px;
+    }
+
+    .projects {
+        @include  font-Arial();
+        letter-spacing: 2px;
+        line-height: 1.5;
+        word-spacing: 2px;
+
+        h3 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .startpage-image {
+            margin: 50px 0 50px 0;
+            min-width: 100px;
+            height: 300px;
+        }
+
+    }
+}
+
+footer {
+    @include flex-container(column, flex-end, flex-start);
+    padding: 10px 0 10px 10px;
+    color: white;
+    background-color: #151515;
+    height: 50vh;
+    width: 98.1vw;
+
+    h2 {
+        margin-left: 15px;
+        @include font-Arial();
+    }
+
+    .contact-footer {
+        margin-bottom: 150px;
+        margin-left: 25px;
+    }
+
+    .nav-footer-container {
+        @include flex-container(row, space-between, center);
+        width: 98.1vw;
+
+        .nav-footer {
+            @include flex-container(row, flex-start, flex-start);
+            flex-grow: 2;
+        }
+
+        .nav-footer-BTN {
+            @include flex-container(row, space-between, center);
+            flex-grow: 2;
+            
+            a {
+                color: white;
+                margin-right: 15px;
+                margin-left: 15px;
+                font-size: large;
+
+                &.active {
+                    color: white;
+                    border: 2px  solid $color-charcoal;
+                    padding: 5px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 5px white;
+                }
+            }
+        }
+
+    }
+}
