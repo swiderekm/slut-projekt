@@ -1,0 +1,98 @@
+.site-header {
+    background-color: $color-azure;
+    display: flex;
+    justify-content:center;
+    padding: 50px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    h2 {
+        color: $color-darkgreen;
+        font-family: 'Roboto';
+    }
+}
+
+.product-description {
+    display: flex;
+    justify-content: center;
+    margin: 1vh;
+
+    p {
+        color: $color-darkgreen;
+        text-align: center;
+    }
+}
+
+/* Collapsible */
+
+.collapsible > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.collapsible .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.collapsible > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.collapsible label {
+  display: block;
+}
+
+/* Styling for the Collapsible */
+body {
+  font-size: 1em;
+  @include font-Arial ();
+  color: black;
+  font-weight: 300;
+}
+
+.collapsible {
+  margin-bottom: 1em;
+}
+
+.collapsible > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid $color-azure;
+  border-top: 0;
+}
+
+.collapsible .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.collapsible label {
+  color: white;
+  cursor: pointer;
+  @include font-Arial();
+  font-weight: normal;
+  padding: 15px;
+  background: $color-eucalyptus;
+}
+
+.collapsible label:hover,
+.collapsible label:focus {
+  background: $color-charcoal;
+}
+
+.collapsible .handle label:before {
+  @include font-Arial();
+  content: "＋";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1em;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+.collapsible > input[type="checkbox"]:checked ~ .handle label:before {
+  content: "－";
+}
