@@ -7,6 +7,9 @@
     padding: 50px;
     color: #18312c;
     @include font-Arial();
+    @include laptop() {
+        font-size: 50px;
+    }
 }
 .building {
     width: 200px;
@@ -14,6 +17,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    @include laptop () {
+        width: 400px;
+        height: 500px;
+    }
 }
 
 .building:hover {
@@ -25,10 +32,15 @@
     display: flex;
     @include flex-container(column, space-evenly, center);
     padding-top: 40px;
+    padding-bottom: 30px;
+    color: $color-charcoal;
+    @include laptop () {
+        @include flex-container(row, space-evenly,center);
+
+    }
 }
 
-.intro-text {
-    max-width: 760px;        
+.intro-text {     
     margin: 28px auto;      
     padding: 50px 35px;     
     background: linear-gradient(180deg, $color-charcoal 0%, $color-eucalyptus 100%); 
@@ -36,6 +48,13 @@
     color: #ffffff;
     box-sizing: border-box;
     @include font-Arial();
+    @include laptop(){
+        background: none;
+        margin: 0px;
+        padding: 0px;
+        box-shadow: none;
+        font-size: 40px;
+    }
 }
 
 .intro-lead {
@@ -45,6 +64,10 @@
     letter-spacing: -0.2px;
     color: #ffffff;
     @include font-Arial();
+    @include laptop(){
+        font-size: 40px;
+        padding-left: 60px;
+    }
 }
 
 .intro-sub {
@@ -53,8 +76,21 @@
     line-height: 1.7;        
     color: $color-azure;
     @include font-Arial();
+    @include laptop(){
+        font-size: 30px;
+        padding-left: 60px;
+        padding-bottom: 300px;
+    }
 }
 
+section.container-form {
+    @include laptop() {
+        display: flex;
+        @include flex-container(row,space-evenly,center);
+        background: linear-gradient(180deg, $color-charcoal 0%, $color-eucalyptus 100%); 
+        padding-top: 40px;
+    }
+}
 
 label {
     display: block;
@@ -63,6 +99,10 @@ label {
     color: $color-darkgreen;
     font-size: 16px;
     @include font-Arial();
+    @include laptop () {
+        color: $color-azure;
+        font-size: 30px;
+    }
 }
 
 select {
@@ -82,6 +122,11 @@ select {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    @include laptop () {
+        width: 500px;
+        height: 60px;
+        font-size: 30px;
+    }
 }
 
 select:hover {
@@ -114,6 +159,9 @@ option:focus {
     font-size: 16px;
     padding-top: 30px;
     @include font-Arial();
+    @include laptop () {
+        font-size: 30px;
+    }
     
 }
 
@@ -141,6 +189,10 @@ input {
     width: 370px;
     height: 40px;
     @include font-Arial();
+    @include laptop(){
+        width: 500px;
+        height: 60px;
+    }
 }
 
 textarea {
@@ -154,6 +206,10 @@ textarea {
     box-sizing: border-box;
     margin-bottom: 20px;
     @include font-Arial();
+    @include laptop () {
+        width: 500px;
+        font-size: 20px;
+    }
 }
 
 .submit {
@@ -170,6 +226,11 @@ textarea {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     @include font-Arial();
+        @include laptop () {
+        width: 500px;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
 }
 
 .submit:hover {

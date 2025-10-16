@@ -47,40 +47,41 @@
             </div>
         </section>
         
-        <section class="intro-text">
-            <p class="intro-lead">Skicka ett meddelande till oss.</p>
-            <p class="intro-sub">Enpålitlig partner. Med kort varsel kan vi hjälpa till med det mesta inom måleri – ett mail eller samtal bort.
-            </p>
+        <section class="container-form">
+            <div class="intro-text">
+                <p class="intro-lead">Skicka ett meddelande till oss.</p>
+                <p class="intro-sub">Enpålitlig partner. Med kort varsel kan vi hjälpa till med det mesta inom måleri <br>– ett mail eller samtal bort.
+                </p>
+            </div>
 
+            <form class="contact-form">
+                <label for="topic">Vad gäller ditt ärende?</label>
+                <select id="topic" name="topic">
+                    <option>–välja–</option>
+                    <option>Köp av tjänst</option>
+                    <option>Frågor om företaget</option>
+                    <option>Synpunkter på webbplats</option>
+                    <option>Annat</option>
+                </select>
+
+                <label>Namn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label>E-post:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label>Telefonnummer:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label>Ämne:</label>
+                <input type="text" id="subject" name="subject">
+
+                <label>Meddelande:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
         </section>
-
-        <form class="contact-form">
-            <label for="topic">Vad gäller ditt ärende?</label>
-            <select id="topic" name="topic">
-                <option>–välja–</option>
-                <option>Köp av tjänst</option>
-                <option>Frågor om företaget</option>
-                <option>Synpunkter på webbplats</option>
-                <option>Annat</option>
-            </select>
-
-            <label>Namn:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label>E-post:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label>Telefonnummer:</label>
-            <input type="tel" id="phone" name="phone">
-
-            <label>Ämne:</label>
-            <input type="text" id="subject" name="subject">
-
-            <label>Meddelande:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-
-            <button type="submit" class="submit">Submit</button>
-        </form>
     </main>
     <footer>
         <div>
