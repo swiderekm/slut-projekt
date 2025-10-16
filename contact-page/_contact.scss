@@ -1,8 +1,12 @@
 .h2-contact {
+    background-color: $color-azure;
     text-align: center;
-    font-size: 50px;
-    margin-top: 50px;
+    font-size: 25px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 50px;
     color: #18312c;
+    @include font-Arial();
 }
 .building {
     width: 200px;
@@ -19,9 +23,7 @@
 
 .info-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex-container(column, space-evenly, center);
     padding-top: 40px;
 }
 
@@ -29,10 +31,11 @@
     max-width: 760px;        
     margin: 28px auto;      
     padding: 50px 35px;     
-    background: linear-gradient(180deg, #1f504f 0%, #658f7e 100%); 
+    background: linear-gradient(180deg, $color-charcoal 0%, $color-eucalyptus 100%); 
     box-shadow: 0 15px 30px rgba(15, 33, 28, 0.06);
     color: #ffffff;
     box-sizing: border-box;
+    @include font-Arial();
 }
 
 .intro-lead {
@@ -41,13 +44,15 @@
     font-weight: 700;
     letter-spacing: -0.2px;
     color: #ffffff;
+    @include font-Arial();
 }
 
 .intro-sub {
     margin: 0;
     font-size: 15.5px;
     line-height: 1.7;        
-    color: #dae6e3;
+    color: $color-azure;
+    @include font-Arial();
 }
 
 
@@ -55,19 +60,20 @@ label {
     display: block;
     font-weight: bold;
     margin-bottom: 6px;
-    color: #0f211c;
+    color: $color-darkgreen;
     font-size: 16px;
+    @include font-Arial();
 }
 
 select {
     width: 370px;
     padding: 10px 14px;
     border-radius: 12px;
-    border: 2px solid #1f504f;
-    background-color: #dae6e3;
-    color: #0f211c;
+    border: 2px solid $color-charcoal;
+    background-color: $color-azure;
+    color: $color-darkgreen;
     font-size: 16px;
-    font-family: inherit;
+    @include font-Arial();
     appearance: none; 
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%231f504f' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -79,73 +85,79 @@ select {
 }
 
 select:hover {
-    border-color: #0f211c;
+    border-color: $color-darkgreen;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 select:focus {
     outline: none;
-    border-color: #0f211c;
+    border-color: $color-darkgreen;
     box-shadow: 0 0 0 3px rgba(31, 80, 79, 0.25);
 }
 
 option {
     background-color: #ffffff;
-    color: #0f211c;
+    color: $color-darkgreen;
     font-size: 16px;
     padding: 10px;
+    @include font-Arial();
 }
 
 option:hover,
 option:checked,
 option:focus {
-    background-color: #1f504f;
+    background-color: $color-charcoal;
     color: #ffffff;
+    @include font-Arial();
 }
 .contact-info {
     font-size: 16px;
     padding-top: 30px;
+    @include font-Arial();
+    
 }
-
 
 form {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start; 
+    @include flex-container(column, space-around, flex-start);
     width: 360px; 
     margin: 0 auto; 
     text-align: left;
     align-items: flex-start;
+}
 
+form.contact-form {
+    gap: 8px;
 }
 
 
 input {
-    background-color: #dae6e3;
+    background-color: $color-azure;
     border-style: solid;
-    border-color: #658f7e;
+    border-color: $color-eucalyptus;
     border-radius: 15px;
-    color: #0f211c;
+    color: $color-darkgreen;
     padding-left: 15px;
-    width: 350px;
+    width: 370px;
     height: 40px;
+    @include font-Arial();
 }
 
 textarea {
-    background-color: #dae6e3;
+    background-color: $color-azure;
     resize: none; 
     width: 370px;
     border-radius: 15px;
-    border: 2px solid #658f7e;
+    border: 2px solid $color-eucalyptus;
     padding: 8px;
     font-size: 16px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    @include font-Arial();
 }
 
 .submit {
-    background-color: #1f504f;
+    background-color: $color-charcoal;
     border-style: none;
     border-radius: 20px;
     color: #ffffff;
@@ -157,12 +169,13 @@ textarea {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    @include font-Arial();
 }
 
 .submit:hover {
     transform: translateY(-6px); 
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
-    background-color: #0f211c; 
+    background-color: $color-darkgreen; 
 }
 
 .submit:active {
@@ -170,3 +183,4 @@ textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     background-color: #18312c; 
 }
+
