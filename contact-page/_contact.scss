@@ -1,3 +1,4 @@
+/* topic */
 .h2-contact {
     background-color: $color-azure;
     text-align: center;
@@ -5,12 +6,14 @@
     margin-top: 1vh;
     margin-bottom: 1vh;
     padding: 50px;
-    color: #18312c;
+    color: $color-darkgreen;
     @include font-Arial();
     @include laptop() {
         font-size: 50px;
     }
 }
+
+/* company's building */
 .building {
     width: 200px;
     height: 300px;
@@ -28,18 +31,33 @@
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); 
 }
 
+/* Vårt konto */
 .info-container {
     display: flex;
     @include flex-container(column, space-evenly, center);
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     color: $color-charcoal;
     @include laptop () {
         @include flex-container(row, space-evenly,center);
-
+        padding-bottom: 60px;
+    }
+    @media (min-width: $medium) {
+        @include flex-container(row, space-evenly,center);
     }
 }
 
+.contact-info {
+    font-size: 16px;
+    padding-top: 30px;
+    @include font-Arial();
+    @include laptop () {
+        font-size: 30px;
+    }
+    
+}
+
+/* Intro-text  */
 .intro-text {     
     margin: 28px auto;      
     padding: 50px 35px;     
@@ -54,9 +72,11 @@
         padding: 0px;
         box-shadow: none;
         font-size: 40px;
+        width: 700px;
     }
 }
 
+/* Skicka ett meddelande till oss. */
 .intro-lead {
     margin: 0 0 8px 0;
     font-size: 20px;         
@@ -66,10 +86,19 @@
     @include font-Arial();
     @include laptop(){
         font-size: 40px;
-        padding-left: 60px;
+        padding-left: 80px;
+    }
+}
+/* Har du några funderingar? */
+h3.intro-lead {
+    font-size: 25px;
+    color: beige;
+    @include laptop(){
+        font-size: 60px;
     }
 }
 
+/* description intro-text */
 .intro-sub {
     margin: 0;
     font-size: 15.5px;
@@ -78,11 +107,12 @@
     @include font-Arial();
     @include laptop(){
         font-size: 30px;
-        padding-left: 60px;
+        padding-left: 80px;
         padding-bottom: 300px;
     }
 }
 
+/* bg of intro-text for laptop */
 section.container-form {
     @include laptop() {
         display: flex;
@@ -92,6 +122,7 @@ section.container-form {
     }
 }
 
+/* label form */
 label {
     display: block;
     font-weight: bold;
@@ -105,7 +136,9 @@ label {
     }
 }
 
+/* dropdown */
 select {
+    text-align: center;
     width: 370px;
     padding: 10px 14px;
     border-radius: 12px;
@@ -146,6 +179,9 @@ option {
     font-size: 16px;
     padding: 10px;
     @include font-Arial();
+    @include laptop () {
+        font-size: 30px;
+    }
 }
 
 option:hover,
@@ -154,15 +190,6 @@ option:focus {
     background-color: $color-charcoal;
     color: #ffffff;
     @include font-Arial();
-}
-.contact-info {
-    font-size: 16px;
-    padding-top: 30px;
-    @include font-Arial();
-    @include laptop () {
-        font-size: 30px;
-    }
-    
 }
 
 form {
@@ -178,7 +205,7 @@ form.contact-form {
     gap: 8px;
 }
 
-
+/* text-input */
 input {
     background-color: $color-azure;
     border-style: solid;
@@ -195,6 +222,7 @@ input {
     }
 }
 
+/* messege */
 textarea {
     background-color: $color-azure;
     resize: none; 
@@ -212,6 +240,7 @@ textarea {
     }
 }
 
+/* submit button */
 .submit {
     background-color: $color-charcoal;
     border-style: none;
@@ -244,4 +273,5 @@ textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     background-color: #18312c; 
 }
+
 
