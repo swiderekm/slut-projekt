@@ -1,3 +1,4 @@
+//Site Header //
 .site-header {
     background-color: $color-azure;
     display: flex;
@@ -8,44 +9,130 @@
 
     h2 {
         color: $color-darkgreen;
-        font-family: 'Roboto';
+        @include font-Arial();
+        font-size: 25px;
+        @include laptop() {
+        font-size: 50px;
+        }  
     }
+    
 }
 
 .product-description {
-    display: flex;
-    justify-content: center;
-    margin: 1vh;
+    margin: 1.5vh;
+    display:flex;
+    flex-direction: column;
+    text-align:justify;
+    align-items: center;
+
+    h3 {
+      color: $color-eucalyptus;
+      @include font-Arial();
+      @include laptop() {
+        font-size: 30px;
+        padding: 10px;
+      }
+    }
 
     p {
         color: $color-darkgreen;
-        text-align: center;
+        padding: 10px;
+        @include font-Arial();
+        @include laptop() {
+        font-size: 20px;
+      }
     }
 }
 
-/* Collapsible */
+.content p {
+  color: $color-darkgreen;
+  @include font-Arial();
+   @include laptop() {
+      font-size: 20px;
+      }
+}
+
+// Collapsible //
 
 .collapsible > input[type="checkbox"] {
   position: absolute;
-  left: -100vw;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.collapsible > input[type="checkbox"]:focus + .handle label {
+  outline: 3px solid $color-azure;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+}
+
+.collapsible > input[type="checkbox"]:focus-visible + .handle label {
+  outline: 3px solid $color-azure;
+  outline-offset: 3px;
+}
+
+.collapsible .handle label {
+  display: block;               
+  cursor: pointer;               
+  user-select: none;
+  
+  padding: 16px 18px;
+  border-radius: 8px;
 }
 
 .collapsible .content {
-  overflow-y: hidden;
-  height: 0;
-  transition: height 0.3s ease;
+  display: grid;
+  grid-template-rows: 0fr;       
+  transition: grid-template-rows 200ms ease;
+  border: 1px solid transparent; 
+}
+
+.collapsible .content > * {
+  overflow: hidden;
 }
 
 .collapsible > input[type="checkbox"]:checked ~ .content {
-  height: auto;
-  overflow: visible;
+  grid-template-rows: 1fr;
+  border: 1px solid $color-azure;
+  border-top: 0;
+  padding: 0 15px 15px;    
 }
 
-.collapsible label {
-  display: block;
+@media (prefers-reduced-motion: reduce) {
+  .collapsible .content { transition: none; }
 }
 
-/* Styling for the Collapsible */
+// Mobile responsiveness //
+.container {
+  max-width: 70rem;    
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+.site-header { padding: clamp(24px, 4vw, 50px); }
+
+.product-description p {
+  max-width: 70ch;      
+  padding-inline: 8px;
+  @include laptop() {
+    max-width:125ch;
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .collapsible .handle label { padding: 18px 16px; }
+  .collapsible .handle { font-size: 1rem; }
+}
+
+// Styling for the Collapsible //
 body {
   font-size: 1em;
   @include font-Arial ();
