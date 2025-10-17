@@ -4,6 +4,13 @@
     }
 }
 
+@mixin tablet {
+    @media (max-width: $medium) {
+        @content;
+    }
+}
+
+
 @mixin laptop {
     @media (min-width: $large) {
         @content;

@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-   
+    <title>Tjänster</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <title>Tjänster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header>
         <div class="header">
             <div class="logo-container">
-                <img src="../images/logo_penseldrag_notext_1.png" alt="Penseldrags logo" class="logo-image">
+                <img src="../images/logo_penseldrag_pastelgreen.png" alt="Penseldrags logo" class="logo-image">
                 <a href="../startpage-page/index.html"><h1>Penseldrag AB</h1></a>
             </div>
                 <div class="desktop-nav">
@@ -41,12 +39,12 @@
     </header>
 
     <main>
+        <header class="site-header">
+            <h2>Våra Tjänster</h2>
+        </header>
         <div class="container">
-            <header class="site-header">
-                <h2>Våra Tjänster</h2>
-            </header>
-
             <section class="product-description">
+                <h3>Text</h3>
                 <p>Vi hjälper privatpersoner, bostadsrättsföreningar och företag med allt från mindre rum till hela fastigheter.
                     Vi tar hand om förarbete, färgsättning och utförande med miljömärkta produkter och hög finish.
                     Tydliga offerter, hålla-tider-garantier och städning ingår – så att du får ett snyggt resultat utan krångel.</p>
@@ -57,47 +55,52 @@
                 <h2 class="handle">
                     <label for="handle1">01 Väggmålning</label>
                 </h2>
-                <div class="content">
+                <div class="content" id="panel1">
                     <p>Vi spacklar, slipar och målar innerväggar i hem och lokaler. Du får hjälp med kulörval, glans och slitstyrka utifrån rummet och ljuset. Vi skyddar ytor, åtgärdar skador och använder lukt- och emission­s­svaga färger för en fräsch, hållbar yta.</p>
                 </div>
             </section>
+
             <section class="collapsible">
                 <input type="checkbox" name="collapse" id="handle2">
                 <h2 class="handle">
                     <label for="handle2">02 Fasadmålning</label>
                 </h2>
-                <div class="content">
+                <div class="content" id="panel2">
                     <p>Trä, puts eller plåt – vi tvättar, skrapar, lagar och grundar innan målning för lång livslängd. Rätt färgsystem väljs efter underlag och väderläge. Vi planerar ställning, väderskydd och tidsfönster så fastigheten får ett jämnt, snyggt och skyddande resultat.</p>
                 </div>
             </section>
+
             <section class="collapsible">
                 <input type="checkbox" name="collapse" id="handle3">
                 <h2 class="handle">
                     <label for="handle3">03 Takmålning</label>
                 </h2>
-                <div class="content">
-                    <p>Vi återställer gula eller spruckna innertak till ett jämnt, kritvitt intryck. Sprickor fogas, skarvar spacklas och taket rollas för en slät finish utan ränder. Perfekt när du vill fräscha upp helhetskänslan i vardagsrum, kök eller hall.</p>
+                <div class="content" id="panel3">
+                    <p>Vi återställer gula eller spruckna innertak. Sprickor fogas, skarvar spacklas och taket rollas för en slät finish utan ränder. Perfekt när du vill fräscha upp helhetskänslan i vardagsrum, kök eller hall.</p>
                 </div>
             </section>
+
             <section class="collapsible">
                 <input type="checkbox" name="collapse" id="handle4">
                 <h2 class="handle">
                     <label for="handle4">04 Trapphusmålning</label>
                 </h2>
-                <div class="content">
+                <div class="content" id="panel4">
                     <p>Vi renoverar trapphus i BRF:er och hyreshus med slitstarka kulörer och tydlig zonindelning. Förarbete, lagningar och målning samordnas per våningsplan för minimal störning. Vi kan även uppdatera socklar, ledstänger och portar för en välkomnande helhet.</p>
                 </div>
             </section>
+
             <section class="collapsible">
                 <input type="checkbox" name="collapse" id="handle5">
                 <h2 class="handle">
                     <label for="handle5">05 Tapetsering</label>
                 </h2>
-                <div class="content">
+                <div class="content" id="panel5">
                     <p>Från diskreta strukturtapeter till mönster och fototapet. Vi gör underarbete, mönsterpassning och skarvhantering för perfekta väggar. Vill du kombinera målat och tapet? Vi hjälper med rumsplan och kulörmatchning för ett harmoniskt resultat.</p>
                 </div>
             </section>
         </div>
+        
     </main>
 
     <footer>
@@ -116,7 +119,7 @@
                 </div>
                 <div class="nav-footer-BTN">
                     <a href="../startpage-page/index.html">Home</a>
-                    <a href="../produkt-page/produkt.html" class="active">Produkt</a>
+                    <a href="../produkt-page/produkt.html" class="active-footer">Produkt</a>
                     <a href="../about-page/about.html">About</a>
                     <a href="../contact-page/contact.html">Contact</a>
                 </div>
