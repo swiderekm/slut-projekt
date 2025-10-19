@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../images/logo_penseldrag_pastelgreen.png">
     <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <header>
         <div class="header">
             <div class="logo-container">
-                <img src="../images/logo_penseldrag_notext_1.png" alt="Penseldrags logo" class="logo-image">
+                <img src="../images/logo_penseldrag_pastelgreen.png" alt="Penseldrags logo" class="logo-image">
                 <a href="../startpage-page/index.html"><h1>Penseldrag AB</h1></a>
             </div>
                 <div class="desktop-nav">
@@ -35,11 +39,11 @@
         </nav>
     </header>
     <main>
-        <h2 class="h2-contact">Kontakta oss</h2>
+        <h2 class="h2-contact" tabindex="0">Kontakta oss</h2>
         <section class="info-container">
-            <img src="../images/building.jpg" alt="Penseldrags byggnad" class="building">
-            <div class="contact-info">
-                <h3> Vårt konto </h3>
+            <img src="../images/building.jpg" alt="Penseldrags byggnad" class="building" tabindex="0">
+            <div class="contact-info" tabindex="0">
+                <h3> Vårt kontor </h3>
                 <p> 🏢 Adress: Storgatan 123, 111 22 Stockholm </p>
                 <p> 📞 Telefon: 08-123 45 678 </p>
                 <p> ✉️ E-post: info@penseldrag.se</p>
@@ -49,8 +53,9 @@
         
         <section class="container-form" id="contact-link">
             <div class="intro-text">
-                <p class="intro-lead">Skicka ett meddelande till oss.</p>
-                <p class="intro-sub">Enpålitlig partner. Med kort varsel kan vi hjälpa till med det mesta inom måleri <br>– ett mail eller samtal bort.
+                <h3 class="intro-lead" tabindex="0">Har du några funderingar?</h3>
+                <p class="intro-lead" tabindex="0">Skicka ett meddelande till oss.</p>
+                <p class="intro-sub" tabindex="0">En pålitlig partner. Med kort varsel kan vi hjälpa till med det mesta inom måleri <br>– ett mail eller samtal bort.
                 </p>
             </div>
 
@@ -64,19 +69,19 @@
                     <option>Annat</option>
                 </select>
 
-                <label>Namn:</label>
+                <label for="name">Namn:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label>E-post:</label>
+                <label for="email">E-post:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label>Telefonnummer:</label>
+                <label for="Telefonnummer">Telefonnummer:</label>
                 <input type="tel" id="phone" name="phone">
 
-                <label>Ämne:</label>
+                <label for="subject">Ämne:</label>
                 <input type="text" id="subject" name="subject">
 
-                <label>Meddelande:</label>
+                <label for="message">Meddelande:</label>
                 <textarea id="message" name="message" rows="4"></textarea>
 
                 <button type="submit" class="submit">Submit</button>
@@ -101,7 +106,7 @@
                     <a href="../startpage-page/index.html">Home</a>
                     <a href="../produkt-page/produkt.html">Produkt</a>
                     <a href="../about-page/about.html">About</a>
-                    <a href="../contact-page/contact.html" class="active">Contact</a>
+                    <a href="../contact-page/contact.html" class="active-footer">Contact</a>
                 </div>
             </div>
         </div>
