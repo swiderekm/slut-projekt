@@ -40,3 +40,17 @@
         }
     }
 }
+
+
+.backBTN-container {
+    .back-to-btn {
+        margin: 1rem 25px 1rem 25px;
+        background-color: $color-eucalyptus;
+        padding: 10px;
+        border-radius: 15px;
+        color: white;
+    }
+
+    @include flex-container(row, flex-start, center);
+
+}
