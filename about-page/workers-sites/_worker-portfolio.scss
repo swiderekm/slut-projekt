@@ -1,0 +1,90 @@
+.profile-container {
+    @include flex-container(column, flex-start, center);
+    max-width: 80rem;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+
+    @include laptop() {
+        @include flex-container(row, center, center);
+    }
+
+    @include tablet() {
+      padding-left: 50px;  
+      padding-right: 50px;
+    }
+
+    .profile-square {
+        @include flex-container(column, center, center);
+        margin-bottom: 1rem;
+
+        .profile-image {
+            height: 350px;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom:1rem ;
+            box-shadow: 0 0 15px $color-darkgreen;
+        }
+
+        h2 {
+            padding: 1rem 0 2rem 0;
+        }
+    }
+
+    .profile-info {
+        @include flex-container(column, center, center);
+        margin: 0 10% 0 10%;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        word-spacing: 2px;
+        box-shadow: 0 0 24px $color-darkgreen;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 1rem;
+
+        h3 {
+            background-color: $color-azure;
+            width: 100%;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .mail {
+            font-weight: bold;
+            border-top: 1px solid #00000072;
+            border-bottom: 1px solid #00000072;
+            width: 100%;
+            padding: 25px 0 25px 0;
+            text-align: left;
+        }
+
+        .info {
+            word-wrap: break-word;
+            font-weight: bolder;
+            background-color: $color-azure;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: left;
+        }
+    }
+}
+
+
+.backBTN-container {
+    .back-to-btn {
+        margin: 1rem 25px 1rem 25px;
+        background-color: $color-charcoal;
+        padding: 10px;
+        border-radius: 15px;
+        color: white;
+        transition: 0.3s;
+
+        &:hover  {
+            box-shadow: 0 0 5px white;
+            background-color: #307978;
+        }
+    }
+
+    @include flex-container(row, flex-start, center);
+
+}

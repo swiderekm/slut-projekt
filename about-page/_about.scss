@@ -14,6 +14,11 @@
             word-wrap: break-word;
             text-align: justify;
             font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-size: 18px;
+            
+            @include laptop() {
+                margin: 0 20% 0 20%;
+            }
         }
     }
 
@@ -61,19 +66,54 @@ a {
 }
 
 .team-container {
-    @include flex-container(row, space-between, center);
+    @include flex-container(row, space-around, center);
     flex-wrap: wrap;
-    margin: 1rem 10% 1rem 10%;
+    margin: 1rem 0 1rem 0;
+    margin-inline: auto;
+    max-width: 470px;
+    gap: 5px;
+
+    @include laptop() {
+
+        .team-container {
+            max-width: 80rem;
+            margin-inline: auto;
+            margin: 5rem 10% 5rem 10%;
+        }
+    }
 
     .worker-cont  {
         text-align: center;
         @include flex-container(column, center, center);
+        padding: 10px;
+        transition: 0.3s;
+        scale: 1.3;
+        margin: 15px;
+        border-radius: 10px;
+
+        @include laptop() {
+            margin: 25px;
+        }
 
         .worker {
-            border: 2px  solid black;
             height: 100px;
             width: 100px;
             margin: 10px;
+            
+            .profile-img {
+                border-radius: 5px;
+                height: 100px;
+                width: 100%;
+                background-size: cover;
+                box-shadow: 0px 0px 25px $color-darkgreen;
+
+            }
+        }
+
+        &:hover {
+            background-color: #9f9f9f39;
+            border-radius: 10px;
+            box-shadow: 0 0 15px black;
         }
     }
 
@@ -101,13 +141,21 @@ a {
     @include flex-container(row, center, center);
     flex-wrap: wrap;
 
+    @include laptop{
+        margin: 1rem 25% 1rem 25%;
+    }
+
     .opinion  {
         background: linear-gradient(180deg, #1f504f 0%, #658f7e 100%);
         min-width: 250px;
-        border-radius: 15px;
         margin: 10px;
+        border-radius: 15px;
         padding: 15px;
         @include flex-container(column, center, center);
+
+        @include laptop() {
+            margin: 2rem;
+        }
 
         .user-info {
             @include flex-container(row, space-between, center);
