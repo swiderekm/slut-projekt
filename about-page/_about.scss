@@ -14,6 +14,10 @@
             word-wrap: break-word;
             text-align: justify;
             font-size: clamp(0.9rem, 2vw, 1.2rem);
+            
+            @include laptop() {
+                margin: 0 20% 0 20%;
+            }
         }
     }
 
@@ -61,19 +65,33 @@ a {
 }
 
 .team-container {
-    @include flex-container(row, space-between, center);
+    @include flex-container(row, space-around, center);
     flex-wrap: wrap;
-    margin: 1rem 10% 1rem 10%;
+    margin: 1rem 0 1rem 0;
+    margin-inline: auto;
+    max-width: 470px;
+    gap: 5px;
+
+    @include laptop() {
+        max-width: 80rem;
+        margin-inline: auto;
+    }
 
     .worker-cont  {
         text-align: center;
         @include flex-container(column, center, center);
 
         .worker {
-            border: 2px  solid black;
             height: 100px;
             width: 100px;
             margin: 10px;
+            
+            .profile-img {
+                border-radius: 5px;
+                height: 100px;
+                width: 100px;
+                background-size: cover;
+            }
         }
     }
 

@@ -1,0 +1,42 @@
+.profile-container {
+    @include flex-container(column, flex-start, center);
+    max-width: 80rem;
+    margin-inline: auto;
+
+    .profile-square {
+        @include flex-container(column, center, center);
+        margin-bottom: 1rem;
+
+        .profile-image {
+            height: 350px;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom:1rem ;
+        }
+    }
+
+    .profile-info {
+        @include flex-container(column, center, center);
+        margin: 0 10% 0 10%;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        word-spacing: 2px;
+        background-color: $color-eucalyptus;
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 1rem;
+
+        .mail {
+            font-weight: bold;
+        }
+
+        .info {
+            word-wrap: break-word;
+            font-weight: bolder;
+            background-color: $color-azure;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    }
+}
