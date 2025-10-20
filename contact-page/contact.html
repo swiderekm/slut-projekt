@@ -70,19 +70,19 @@
                 </select>
 
                 <label for="name">Namn:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required autocomplete="name">
 
                 <label for="email">E-post:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required autocomplete="email">
 
-                <label for="Telefonnummer">Telefonnummer:</label>
-                <input type="tel" id="phone" name="phone">
+                <label for="phone">Telefonnummer:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
 
                 <label for="subject">Ämne:</label>
-                <input type="text" id="subject" name="subject">
+                <input type="text" id="subject" name="subject" autocomplete="off">
 
                 <label for="message">Meddelande:</label>
-                <textarea id="message" name="message" rows="4"></textarea>
+                <textarea id="message" name="message" rows="4" autocomplete="off"></textarea>
 
                 <button type="submit" class="submit">Submit</button>
             </form>
