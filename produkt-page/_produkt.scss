@@ -12,57 +12,107 @@
         @include font-Arial();
         font-size: 25px;
         @include tablet() {
-          font-size: 45px;
+          font-size: 30px;
         }
         @include laptop() {
-        font-size: 50px;
+        font-size: 45px;
         }  
     }
     
 }
-
+// Product Description //     
 .product-description {
-    margin: 1.5vh;
-    display:flex;
-    flex-direction: column;
-    text-align:justify;
-    align-items: center;
+  display: block;                 
+  text-align: center;             
+  max-width: 120ch;
+  margin: 2rem auto;              
+  padding: 1.25rem 1.25rem;
 
-    h3 {
-      color: $color-eucalyptus;
-      @include font-Arial();
-      @include tablet() {
-        font-size: 25px;
-        padding: 10px;
-      }
-      @include laptop() {
-        font-size: 30px;
-        padding: 10px;
-      }
-    }
+  @include laptop() {
+    background: white;               
+    border-radius: 15px;
+    box-shadow: 0 5px 25px $color-charcoal;
+  }         
 
-    p {
-        color: $color-darkgreen;
-        padding: 10px;
-        @include font-Arial();
-        @include tablet() {
-          font-size: 40px;
-        }
-        @include laptop() {
-        font-size: 20px;
-      }
+  h3 {
+    color: $color-eucalyptus;
+    @include font-Arial();
+    font-size: 22px;
+    padding: 10px;
+    @include tablet() { 
+      font-size: 25px; 
     }
+    @include laptop() { 
+      font-size: 30px; 
+    }
+  }
+
+  p {
+    color: $color-darkgreen;
+    @include font-Arial();
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 2px;     
+    padding: 10px;
+    text-align: left;
+    margin: 0;
+    @include laptop() {
+      font-size: 20px; line-height: 1.8; 
+    }
+  }
+
+  span {
+    font-weight: bold;
+    color: #f44336;
+  }
 }
 
-.content p {
-  color: $color-darkgreen;
-  @include font-Arial();
-  @include tablet() {
-    font-size: 40px;
+.img-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    max-width: 95%;
+    height: auto;
   }
-   @include laptop() {
-      font-size: 20px;
-      }
+
+  @include laptop() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      margin: 21px;
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Text inside collapsible menu //
+.content {
+  p {
+    color: $color-darkgreen;
+    @include font-Arial();
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    @include tablet() {
+      font-size: 18px;
+    }
+    @include laptop() {
+        font-size: 20px;
+        }
+  }
+  span {
+    font-weight: bold;
+  }
 }
 
 // Collapsible //
@@ -122,18 +172,24 @@
   .collapsible .content { transition: none; }
 }
 
-// Responsiveness //
-.container {
+// Responsiveness Collapsible //
+.container-collapsible {
   max-width: 70rem;    
   margin-inline: auto;
   padding-inline: clamp(16px, 3vw, 32px);
 }
 
-.site-header { padding: clamp(24px, 4vw, 50px); }
+.site-header { 
+  padding: clamp(24px, 4vw, 50px); 
+}
 
 .product-description p {
   max-width: 70ch;      
   padding-inline: 8px;
+  @include tablet() {
+    max-width:125ch;
+    padding-inline: 8px;
+  }
   @include laptop() {
     max-width:125ch;
     padding-inline: 8px;
@@ -173,9 +229,17 @@ body {
   color: white;
   cursor: pointer;
   @include font-Arial();
+  font-size: 20px;
+  letter-spacing: 2px;
   font-weight: normal;
   padding: 15px;
   background: $color-eucalyptus;
+  @include tablet() {
+    font-size: 20px;
+  }
+  @include laptop() {
+    font-size: 22px;
+  }
 }
 
 .collapsible label:hover,
@@ -195,4 +259,32 @@ body {
 
 .collapsible > input[type="checkbox"]:checked ~ .handle label:before {
   content: "－";
+}
+
+// Button Link //
+.button-link:link, .button-link:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 18px 25px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  @include laptop() {
+    padding: 25px;
+    font-size: 22px;
+  }
+}
+
+.button-link:hover, .button-link:active {
+  background-color: $color-charcoal;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+
 }
