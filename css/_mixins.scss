@@ -6,5 +6,10 @@
 }
 
 @mixin font-Arial () {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+@mixin font-Franklin () {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
