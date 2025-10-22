@@ -145,6 +145,7 @@
   display: block;               
   cursor: pointer;               
   user-select: none;
+  text-shadow: 0 0 2px black;
   
   padding: 16px 18px;
   border-radius: 8px;
@@ -265,6 +266,7 @@ body {
 .button-link:link, .button-link:visited {
   background-color: #f44336;
   color: white;
+  text-shadow: 0 0 5px black;
   padding: 18px 25px;
   font-size: 20px;
   letter-spacing: 2px;
