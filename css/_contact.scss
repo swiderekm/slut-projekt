@@ -96,10 +96,12 @@
         padding-left: 80px;
     }
 }
+
 /* Har du några funderingar? */
 h3.intro-lead {
     font-size: 25px;
     color: beige;
+    @include font-Arial ();
     @include laptop(){
         font-size: 60px;
     }
