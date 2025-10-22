@@ -35,7 +35,7 @@
   }         
 
   h3 {
-    color: $color-eucalyptus;
+    color: $color-darkgreen;
     @include font-Arial();
     font-size: 22px;
     padding: 10px;
@@ -48,7 +48,7 @@
   }
 
   p {
-    color: $color-darkgreen;
+    color: black;
     @include font-Arial();
     font-size: 18px;
     line-height: 1.6;
@@ -98,7 +98,7 @@
 // Text inside collapsible menu //
 .content {
   p {
-    color: $color-darkgreen;
+    color: black;
     @include font-Arial();
     font-size: 18px;
     line-height: 1.6;
